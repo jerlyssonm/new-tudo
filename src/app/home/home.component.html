@@ -1,5 +1,56 @@
-<div *ngFor="let i of DB">
-    <h1>Titulo: {{i.title}}</h1>
-    <h6>Descrição: {{i.description}}</h6>
-    <span>Categoria: {{i.category}}</span>
+<div class="dashHome">
+    <div class='head'>
+        <span></span>
+        <h1>Tarefas</h1>
+        <div class="search-box">
+            <input type="text" class="input-search" placeholder="Digite aqui..."/>
+            <a class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M14.53 15.59a8.25 8.25 0 111.06-1.06l5.69 5.69a.75.75 0 11-1.06 1.06l-5.69-5.69zM2.5 9.25a6.75 6.75 0 1111.74 4.547.746.746 0 00-.443.442A6.75 6.75 0 012.5 9.25z"></path></svg>
+            </a>
+        </div>
+    </div>
+    <div class='box-task'>
+        <h2>A FAZER</h2>
+            <div *ngFor="let task of taskIncomplete.slice(0,3)"
+                class="task"
+                [ngClass]="{
+                    'type1': task.category == 'trabalho',
+                    'type2': task.category == 'entrevista',
+                    'type3': task.category == 'contratação'
+                }">
+                <input type="checkbox" class='check'/>
+                <div>
+                    <h5>{{task.title}}</h5>
+                    <p>{{task.description}}</p>
+                </div>
+            </div>
+            <span *ngIf="taskIncomplete.length > 3" class='all-span'>Ver todos</span>
+    </div>
+    <div class='box-progress'>
+        <h2>EM PROGRESSO</h2>
+        <div class="scroll">
+            <div *ngFor="let task of dbNow"
+            class="percent"
+            [ngClass]="{
+                'type1': task.category == 'trabalho',
+                'type2': task.category == 'entrevista',
+                'type3': task.category == 'contratação'
+            }">
+                <h5>{{task.title.split(' ')[0]}}</h5>
+                <p>{{task.description.slice(0,17)+'...'}}</p>
+            </div>
+        </div>
+        <span class='all-span'>Ver todos</span>
+    </div>
+    <div class="completed">
+        <h2>CONCLUÍDO</h2>
+        <div class='task box-completed'
+            *ngFor="let task of taskCompleted">
+            <input type="checkbox" checked class='check' />
+            <div>
+                <h6>{{task.title}}</h6>
+                <p>{{task.description}}</p>
+            </div>
+        </div>
+    </div>
 </div>

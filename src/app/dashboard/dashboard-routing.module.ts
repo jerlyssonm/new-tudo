@@ -12,7 +12,7 @@ const routes: Routes = [
       {path:'planner', loadChildren: () => import('../planner/planner.module').then(m=>m.PlannerModule)},
       {path:'profile', loadChildren: () => import('../profile/profile.module').then(m=> m.ProfileModule)},
       {path:'add-task', loadChildren: () => import('../add-task/add-task.module').then(m => m.AddTaskModule)},
-      {path:'view-task', loadChildren: ()=> import('../task/task.module').then(m=>m.TaskModule)}
+      {path:'view-task/:id', loadChildren: ()=> import('../task/task.module').then(m=>m.TaskModule)}
     ]
   }
 

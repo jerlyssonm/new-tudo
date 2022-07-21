@@ -8,6 +8,7 @@ import { LoginModule } from './login/login.module';
 import { RegisterModule } from './register/register.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeModule } from './home/home.module';
+import { ManageUsersService } from './manage-users.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -22,7 +23,7 @@ import { HomeModule } from './home/home.module';
     HomeModule
 
   ],
-  providers: [],
+  providers: [ManageUsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
