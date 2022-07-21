@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ManageUsersService } from '../manage-users.service';
 
 @Component({
   selector: 'app-task',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
-
-  constructor() { }
+  public tasks:any;
+  public id: any;
+  constructor(
+    private userService: ManageUsersService,
+    private route: ActivatedRoute
+    ) { 
+      this.route.params.subscribe(params => this.id = params['id'])
+    }
 
   ngOnInit(): void {
+    this.tasks = this.userService.getTasks();
+
   }
 
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ManageUsersService} from '../manage-users.service';
-import {DB} from '../mockDB';
 
 @Component({
   selector: 'app-home',

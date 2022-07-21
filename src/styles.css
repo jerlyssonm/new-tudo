@@ -44,3 +44,6 @@ form input{
 .box-btn a:visited{
   color: grey;
 }
+hr{
+  margin: .3em
+}

@@ -14,12 +14,19 @@
         "category":"trabalho",
         "archives": "algum anexo",
         "completed": true,
-        "members": {
+        "members": [{
           "id":1,
           "img": "",
           "name": "nome",
-        },
-        "subtask":["criar front", "criar back-end"],
+        },{
+          "id":2,
+          "img": "",
+          "name": "nome",
+        }],
+        "subtask":[
+          {"title": "criar front","completed": true},
+          {"title": "criar back-end","completed": false},
+        ],
       },
       {
         "id":2,
@@ -29,12 +36,15 @@
         "category":"entrevista",
         "archives": "algum anexo",
         "completed": false,
-        "members": {
+        "members":[ {
           "id":1,
           "img": "",
           "name": "nome",
-        },
-        "subtask":["criar front", "criar back-end"],
+        }],
+        "subtask":[
+          {"title": "criar front","completed": true},
+          {"title": "criar back-end","completed": true},
+        ],
       },
       {
         "id":3,
@@ -44,12 +54,19 @@
         "category":"contratação",
         "archives": "algum anexo",
         "completed": false,
-        "members": {
+        "members": [{
           "id":1,
           "img": "",
           "name": "nome",
-        },
-        "subtask":["criar front", "criar back-end"],
+        },{
+          "id":2,
+          "img": "",
+          "name": "nome",
+        }],
+        "subtask":[
+          {"title": "criar front","completed": true},
+          {"title": "criar back-end","completed": true},
+        ],
       },
       {
         "id":4,
@@ -59,12 +76,16 @@
         "category":"contratação",
         "archives": "algum anexo",
         "completed": true,
-        "members": {
+        "members": [{
           "id":1,
           "img": "",
           "name": "nome",
-        },
-        "subtask":["criar front", "criar back-end"],
+        }],
+        "subtask":[
+          {"title": "criar front", "completed": true},
+          {"title": "criar back-end","completed": true},
+          {"title": "criar api","completed": true},
+        ],
       },
     ],
   },

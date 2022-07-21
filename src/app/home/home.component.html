@@ -19,7 +19,7 @@
                     'type3': task.category == 'contratação'
                 }">
                 <input type="checkbox" class='check'/>
-                <div>
+                <div [routerLink]="['/view-task/'+task.id]">
                     <h5>{{task.title}}</h5>
                     <p>{{task.description}}</p>
                 </div>
@@ -30,6 +30,7 @@
         <h2>EM PROGRESSO</h2>
         <div class="scroll">
             <div *ngFor="let task of dbNow"
+            [routerLink]="['/view-task/'+task.id]"
             class="percent"
             [ngClass]="{
                 'type1': task.category == 'trabalho',
@@ -47,8 +48,8 @@
         <div class='task box-completed'
             *ngFor="let task of taskCompleted">
             <input type="checkbox" checked class='check' />
-            <div>
-                <h6>{{task.title}}</h6>
+            <div [routerLink]="['/view-task/'+task.id]">
+                <h5>{{task.title}}</h5>
                 <p>{{task.description}}</p>
             </div>
         </div>
