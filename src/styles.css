@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --primary1: rgb(26, 85, 180);
+    --primary2: rgb(106, 165, 255);
+    --secundary1: rgb(254, 116, 111);
+    --secundary2: rgb(254, 200, 87);
+    --secundary3: rgb(235, 244, 253);
+  }
+.border-footer{
+  margin: 1em auto;
+  border-bottom: 2px solid black;
+  width: 40%;
+}
+form input{
+  background-color: rgb(235, 244, 253);
+  margin-bottom: .8em;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(160, 160, 160);
+}
+.box-btn{
+  margin: 1em 0 .5em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box-btn button{
+  background-color: var(--primary1);
+  color: white;
+  font-size: .7em;
+  border: none;
+  padding: .9em;
+  border-radius: 5px;
+  width: 100%;
+  margin: 1em 0 1em 0;
+  cursor: pointer;
+}
+.box-btn a{
+  color: grey;
+  margin: 2em 0 1em 0;
+  font-size: .7em;
+  text-decoration: none;
+}
+.box-btn a:visited{
+  color: grey;
+}
