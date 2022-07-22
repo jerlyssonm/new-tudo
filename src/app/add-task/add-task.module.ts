@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AddTaskRoutingModule } from './add-task-routing.module';
 import { AddTaskComponent } from './add-task.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { AddTaskComponent } from './add-task.component';
   ],
   imports: [
     CommonModule,
-    AddTaskRoutingModule
+    AddTaskRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class AddTaskModule { }

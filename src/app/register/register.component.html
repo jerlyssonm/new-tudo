@@ -1,17 +1,17 @@
 <div class='box-register'>            
-    <form >
+    <form [formGroup]="registerForm" >
         <a [routerLink]="['/']">__</a>
         <h1>Cadastrar</h1>
-        <label htmlFor="">Nome</label>
-        <input type="text" />
-        <label htmlFor="">E-mail</label>
-        <input type="text" />
-        <label htmlFor="">Senha</label>
-        <input type="password"/>
-        <label htmlFor="">Repetir senha</label>
-        <input type="password" />
+        <label >Nome</label>
+        <input formControlName="name" type="text" />
+        <label >E-mail</label>
+        <input formControlName="email" type="text" />
+        <label >Senha</label>
+        <input formControlName="password" type="password"/>
+        <label >Repetir senha</label>
+        <input formControlName="repassword" type="password" />
         <div class='box-btn'>
-            <button type='submit'>
+            <button (click)="getRegister()" [routerLink]="['/login']">
                 Cadastrar 
             </button>
             <button>Continuar com Google</button>
